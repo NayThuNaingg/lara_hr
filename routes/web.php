@@ -18,6 +18,7 @@ use App\Http\Controllers\PageController;
 
 
 Auth::routes();
+Auth::routes(['register' => false]);
 Route::middleware(['auth'])->group(function () {
     // Routes that require authentication
 

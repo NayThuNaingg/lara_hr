@@ -4,11 +4,10 @@
 <div class="container">
     <div class="row justify-content-center align-content-center" style="height: 100vh;">
         <div class="col-md-6">
+            <div class="text-center"><img src="{{URL::asset('img/logo.png')}}" alt="Lara HR" style="width:200px;border-radius:20px;"></div>
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
-
                 <div class="card-body">
-                    <h5>Login</h5>
                     <p class="text-muted">Please fill form</p>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -17,12 +16,12 @@
                                 <div class="col-md-6 form-outline mb-4">
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                     <label class="form-label" for="email">Email address</label>
-                                    @error('email')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
                                 </div>
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
     
                             <div class="row mb-2 justify-content-center align-content-center">
