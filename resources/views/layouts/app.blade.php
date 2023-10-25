@@ -6,11 +6,13 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>@yield('title')</title>
-
+    {{-- custom css --}}
+    <link rel="stylesheet" href="{{ URL::asset('css/custom.css') }}">
     <!-- Font Awesome -->
-    <link href="{{ URL::asset('css/all.min.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {{-- <link href="{{ URL::asset('css/fontawsome.min.css') }}" rel="stylesheet" />
+    <link href="{{ URL::asset('css/all.min.css') }}" rel="stylesheet" /> --}}
     <!-- Google Fonts -->
     <link href="{{ URL::asset('css/css.css') }}" rel="stylesheet" />
     <!-- MDB -->
@@ -20,8 +22,8 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <div id="app" style="margin: 0px;">
+        {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -73,11 +75,45 @@
                     </ul>
                 </div>
             </div>
-        </nav>
-
-        <main class="py-4">
+        </nav> --}}
+        <div class="header-menu">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="d-flex justify-content-between">
+                        <a href=""></a>
+                        <h5>@yield('title')</h5>
+                        <a href=""></a>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <div class="py-4">
             @yield('content')
-        </main>
+        </div>
+        <div class="botton-menu">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="d-flex justify-content-between">
+                        <a href="#">
+                            <i class="fa-solid fa-house"></i>
+                            <p class="mb-0 text-decoration-none">Home</p>
+                        </a>
+                        <a href="">
+                            <i class="fa-solid fa-house"></i>
+                            <p class="mb-0 text-decoration-none">Home</p>
+                        </a>
+                        <a href="">
+                            <i class="fa-solid fa-house"></i>
+                            <p class="mb-0 text-decoration-none">Home</p>
+                        </a>
+                        <a href="">
+                            <i class="fa-solid fa-house"></i>
+                            <p class="mb-0 ">Home</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
      <!-- MDB -->

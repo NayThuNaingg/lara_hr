@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center align-content-center" style="height: 100vh;">
         <div class="col-md-6">
-            <div class="text-center"><img src="{{URL::asset('img/logo.png')}}" alt="Lara HR" style="width:200px;border-radius:20px;"></div>
+            <div class="text-center"><img src="{{URL::asset('img/logo.png')}}" alt="Lara HR" style="width:150px;border-radius:20px;"></div>
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
                 <div class="card-body">
