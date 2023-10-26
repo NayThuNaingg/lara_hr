@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,8 @@ Route::middleware(['auth'])->group(function () {
     // Routes that require authentication
 
     Route::get('/',[PageController::class,'home']);
+    Route::resource('employee',EmployeeController::class);
+    Route::get('employee/datatable/list',[EmployeeController::class,'list']);
 
 });
 
