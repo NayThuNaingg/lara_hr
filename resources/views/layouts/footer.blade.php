@@ -1,5 +1,5 @@
         <!-- Footer Start -->
-        <div class="container pt-2 px-2 fixed-bottom d-none d-sm-block">
+        <div class="container pt-2 px-2">
         <div class="bg-light rounded-top p-4">
             <div class="row">
                 <div class="col-12 col-sm-6 text-center text-sm-start ">

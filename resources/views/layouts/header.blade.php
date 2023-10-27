@@ -45,7 +45,7 @@
         <!-- Spinner End -->
 
         <!-- Sidebar Start -->
-        <div class="sidebar pe-4 pb-3">
+        <div class="sidebar pe-4 pb-3 ">
             <nav class="navbar bg-light navbar-light">
                 <a href="index.html" class="navbar-brand mx-4 mb-3">
                     <h3 class="text-primary"></i>Lara HR</h3>
@@ -89,9 +89,9 @@
         <!-- Sidebar End -->
 
         <!-- Content Start -->
-        <div class="container-fluid pt-4 px-4" style="min-height:100vh;">
+        <div class="content pt-4 px-4" >
             <!-- Navbar Start -->
-            <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4">
+            <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
                 <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
                 </a>
                 <a href="#" class="sidebar-toggler flex-shrink-0">
