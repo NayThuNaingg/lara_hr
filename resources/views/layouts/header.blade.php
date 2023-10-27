@@ -86,9 +86,9 @@
         <!-- Sidebar End -->
 
         <!-- Content Start -->
-        <div class="content">
+        <div class="container-fluid pt-4 px-4" style="min-height:100vh;">
             <!-- Navbar Start -->
-            <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+            <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4">
                 <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
                 </a>
                 <a href="#" class="sidebar-toggler flex-shrink-0">
