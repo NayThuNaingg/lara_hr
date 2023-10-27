@@ -14,9 +14,23 @@ class EmployeeController extends Controller
     public function list(Request $request) {
     {
         if ($request->ajax()) {
-            // $employee = User::query();
-            return Datatables::of(User::query())->make(true);
+            $employee = User::with('department');
+            return Datatables::of($employee)
+            ->addColumn('department_name', function($each){
+                return $each->department ? $each->department->department : '-';
+            })
+            ->editColumn('status', function($each) {
+                if($each->status == 0 ) {
+                    return '<span class="btn btn-danger rounded-pill m-2">Leave</span>';
+                } else {
+                    return '<span class="btn btn-primary rounded-pill m-2">Present</span>';
+                };
+            })->rawColumns(['status'])
+            ->make(true);
         }
     }
+    }
+    public function create() {
+        return view('employee.create');
     }
 }
