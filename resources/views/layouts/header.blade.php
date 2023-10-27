@@ -28,7 +28,7 @@
 
     <!-- Template Stylesheet -->
     <link href="{{URL::asset('assets/css/style.css')}}" rel="stylesheet">
-
+    <!-- <script src="{{URL::asset('js/jquery.min.js')}}"></script> -->
 </head>
 
 <body>
