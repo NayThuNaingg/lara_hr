@@ -6,12 +6,11 @@
             <div class="col-sm-12 col-md-12">
                 <div class="bg-light rounded p-4">
                     <h6 class="mb-4">Register</h6>
-                    <form action="{{route('employee.create')}}" method="POST">
+                    <form action="{{route('employeeStore')}}" method="POST">
                         @csrf
-                        
                         <div class="row">
                             <div class="col-sm-12 col-md-6 mb-3">
-                                <input type="text" class="form-control"  placeholder="employee ID" name="employeeId" required />
+                                <input type="text" class="form-control"  placeholder="employee ID" name="employee_id" required />
                             </div>
                             <div class=" col-sm-12 col-md-6 mb-3">
                                 <input type="text" class="form-control"  placeholder="name" name="name" required />
@@ -52,14 +51,18 @@
                                 <input placeholder="password-confirm" type="password" class="form-control" name="password_confirmation"  autocomplete="new-password" required>
                             </div>
                             <div class=" col-sm-12 col-md-6 mb-3">
-                                <input type="text" class="form-control"  placeholder="status" name="status" required />
+                                <select class="form-select col-md-6 mb-3" aria-label="Choose Status" name="status">
+                                    <option selected>Choose Status</option>
+                                    <option value="1">Present</option>
+                                    <option value="2">Leave</option>
+                                </select>
                             </div>
                         </div>
 
                        <div class="row">
                         <div class="col-sm-12 col-md-6 mb-3">
                             <div class="form-floating mb-3">
-                                <input type="date" class="form-control" id="dob" name="register_date">
+                                <input type="date" class="form-control" id="dob" name="dob">
                                 <label for="dob">Date Of Birth</label>
                             </div>
                         </div>
@@ -71,22 +74,34 @@
                         </div>
                        </div>
 
+                       <div class="row">
                         <div class=" col-sm-12 col-md-12 mb-3">
-                            <div class="form-floating">
-                                <textarea class="form-control" id="floatingTextarea" style="height: 80px;"></textarea>
-                                <label for="floatingTextarea">Address</label>
+                            <select class="form-select col-md-6 mb-3" aria-label="Choose Status" name="department_id">
+                                <option selected>Choose Department</option>
+                                <option value="1">Present</option>
+                                <option value="2">Leave</option>
+                            </select>
+                        </div>
+                    </div>
+
+                        <div class="row">
+                            <div class=" col-sm-12 col-md-12 mb-3">
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="floatingTextarea" style="height: 80px;" name="address"></textarea>
+                                    <label for="floatingTextarea">Address</label>
+                                </div>
                             </div>
                         </div>
 
                         <div class="mb-3">
                             <div class="col-sm-10">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gender" id="male" value="gender" checked>
-                                    <label class="form-check-label" for="male">Male</label>
+                                    <input class="form-check-input" type="radio" name="gender" id="male" value="0" checked>
+                                    <label class="form-check-label" for="male" >Male</label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="gender"
-                                        id="female" value="female">
+                                        id="female" value="1">
                                     <label class="form-check-label" for="female">Female</label>
                                 </div>
                             </div>
@@ -96,7 +111,7 @@
                             <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                             <label class="form-check-label" for="remember">Agree Term and Policy</label>
                         </div>
-                        <button type="submit" class="btn btn-primary">Register</button>
+                        <input type="submit" class="btn btn-primary">
                     </form>
                 </div>
             </div>

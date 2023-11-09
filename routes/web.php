@@ -17,15 +17,14 @@ use App\Http\Controllers\EmployeeController;
 */
 
 
-
-Auth::routes();
 Auth::routes(['register' => false]);
 Route::middleware(['auth'])->group(function () {
     // Routes that require authentication
 
-    Route::get('/',[PageController::class,'home']);
-    Route::resource('employee',EmployeeController::class);
-    Route::get('employee/datatable/list',[EmployeeController::class,'list']);
+    Route::get('/',[PageController::class,'home'])->name('index');
+    Route::get('employee/create',[EmployeeController::class,'create'])->name('employeeCreate');
+    route::post('employee/store',[EmployeeController::class,'store'])->name('employeeStore');
+    Route::get('employee/index',[EmployeeController::class,'index'])->name('employeeIndex');
 
 });
 
