@@ -29,7 +29,6 @@ class User extends Authenticatable
         'dob',
         'gender', 
         'address',
-        'department_id', 
         'register_date', 
         'status'
     ];
